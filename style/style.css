@@ -1,0 +1,209 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+
+  color: white;
+  font-size: 40px;
+  line-height: 1;
+  padding: 300px 0;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  float: right;
+  list-style-type: none;
+}
+
+nav li{
+  float: left;
+  padding-right: 20px;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top:-40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+  
+.skip a:focus{
+  top: 0;
+  visibility: visible;
+/*Add the selector and rule to move the skip link to the exact top.*/
+}
+
+*:focus{
+  border: 2px solid black;
+/*Add the selector and code to put a 2px black border around all elements in focus.*/
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;
+  grid-row: 7; 
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: 100px 500px 100px;
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-row-gap: 15px;
+   
+  width: 100vw; 
+}
+
+
+.nav{
+   /*Your code here */
+   grid-column: 1/-1;
+   grid-row: 1;
+  /*Provided*/
+  background-color: #ddd;
+  padding: 5px 0; 
+  text-align: left; 
+}
+
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/rea_professional_pic.jpg");      /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 350px;                /* Parallax effect */
+  padding: 35px 0;
+  grid-column: 1/-1;
+  grid-row: 3 / 4;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+#experience{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/prof.jpg");  
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 200px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 3 / 4;
+}
+
+#experience h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 25px 0;
+  text-align: center;
+}
+
+#proj{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/projects.jpg");
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 200px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 3 / 4;
+}
+
+#proj h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 25px 0;
+  text-align: center;
+}
+
+#passions{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/passions.jpg");
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 200px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 3 / 4;
+}
+
+#passions h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.about-image{
+  background: url("../images/");
+  max-height: 700px;
+  overflow: hidden;
+  grid-column: 1/-1;
+  grid-row:3;
+}
+
+.about{
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+}
+
+.experience{
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+}
+
+.projects{
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+}
+
+.passions{
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+}
