@@ -97,7 +97,22 @@ footer{
   text-align: left;
 }
 
-header{
+#universal{
+  background-color: black;
+  padding: 10px 0;
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
+#universal h1{
+  font-size: 15px;
+  color: white;
+  line-height: 1;
+  padding: 2px;
+  text-align: center;
+}
+
+#intro{
   background-attachment: absolute; /* Parallax effect */
   background-image: url("../images/rea_professional_pic.jpg");
   background-position: middle;   /*Parallax effect */ 
@@ -111,7 +126,7 @@ header{
   grid-row: 2;
 }
 
-header p{
+#intro p{
   color: white;
   font-size: 24px;
   padding: 0 100px;
@@ -135,13 +150,13 @@ header p{
   height: 150px;                /* Parallax effect */
 
   grid-column: 1/-1;
-  grid-row: 2;
+  grid-row: 2/3;
 }
 
 #experience h1{
   font-size: 30px;
   line-height: 1;
-  padding-top: 2px;
+  padding: 25px 0;
   text-align: center;
   color: white;
 }
@@ -191,13 +206,13 @@ header p{
   height: 150px;                /* Parallax effect */
 
   grid-column: 1/-1;
-  /*grid-row: 4 / 5; */
+  grid-row: 2 / 3; 
 }
 
 #passions h1{
   font-size: 30px;
   line-height: 1;
-  padding: 5px 0;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -260,7 +275,8 @@ header p{
   transform: rotate(90deg);
 }
 
-.gallery{
+.gallery:hover{
+    filter: grayscale(100%);
   display: flex;
   flex-wrap: wrap;
 }
@@ -273,7 +289,7 @@ div.gallery:hover {
   border: 1px solid #777;
 }
 
-div.gallery img {
+div.gallery img{
   width: 100%;
   height: 100%;
 }
@@ -290,21 +306,9 @@ div.desc {
 .responsive {
   padding: 0 6px;
   float: left;
-  width: 24.99999%;
+  width: 100%;
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
 
 .clearfix:after {
   content: "";
@@ -322,19 +326,73 @@ div.desc {
   height: 150px;                /* Parallax effect */
 
   grid-column: 1/-1;
-  grid-row: 2;
+  grid-row: 2/3;
 }
 
 #contact h1{
   font-size: 20px;
   line-height: 1;
-  padding-top: 15px;
+  padding: 25px 0;
   text-align: center;
   color: white;
 }
 
-form {
+.contact{
+  grid-column: 1/-1;
+  grid-row: 4;
+  align-self: center;
+  padding: 15px;
+}
+
+/*form {
   padding: 10px;
+}*/
+
+.clip-text {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+.clip-text_four {
+    background-image: url(https://picsum.photos/480/200?grayscale&blur=3);
 }
 
 #facts {
@@ -369,4 +427,123 @@ div.at-container {
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .responsive {
+    width: 50%;
+  }
+
+    #intro{
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../images/rea_professional_pic.jpg");
+    background-position: middle;   /*Parallax effect */ 
+    background-repeat: no-repeat;  /*Parallax effect*/ 
+    background-size: cover;        /*Parallax effect*/ 
+    background-color: black;
+    color: white;
+    height: 300px;                  /*Parallax effect*/
+    padding: 35px 0;
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+
+  nav ul{
+    float: right;
+    list-style-type: none;
+  }
+
+  nav li{
+    float: left;
+    padding-right: 50px;
+    font-size: 25px;
+  }
+  
+  h1{
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    padding: 200px 10px;
+    text-align: center;
+  }
+
+  h2{
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: center;
+  }
+
+  #experience{
+    background-attachment: fixed;  /*Parallax effect*/ 
+    background-image: url("../images/prof.jpg");  
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat;  /*Parallax effect */
+    background-size: cover;        /*Parallax effect */
+    color: white;
+    height: 250px;                /* Parallax effect */
+
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+  
+  #proj{
+  background-attachment: fixed;  /*Parallax effect*/ 
+  background-image: url("../images/projects.jpg");
+  background-position: center;   /*Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 250px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  }
+
+  #passions{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/passions.jpg");
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 250px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 2 / 3; 
+}
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  #intro{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/rea_professional_pic.jpg");
+  background-position: middle;   /*Parallax effect */ 
+  background-repeat: no-repeat;  /*Parallax effect*/ 
+  background-size: cover;        /*Parallax effect*/ 
+  background-color: black;
+  color: white;
+  height: 300px;                  /*Parallax effect*/
+  padding: 35px 0;
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
+  nav ul{
+    float: right;
+    list-style-type: none;
+  }
+
+  nav li{
+    float: left;
+    padding-right: 12px;
+    font-size: 20px;
+  }
+
+  .responsive {
+    width: 3fr;
+    margin: 6px 0;
+  }
+  
 }
