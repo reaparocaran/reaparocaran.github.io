@@ -2,6 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 body{
   background-color: #ddd;
   font-size: 18px;
@@ -265,8 +266,6 @@ header p{
 }
 
 div.gallery {
-/*  display: flex;
-  flex-wrap: wrap;*/
   border: 1px solid #ccc;
 }
 
