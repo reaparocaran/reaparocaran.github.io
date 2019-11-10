@@ -159,14 +159,14 @@ header p{
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
-  height: 200px;                /* Parallax effect */
+  height: 150px;                /* Parallax effect */
 
   grid-column: 1/-1;
   grid-row: 2/3;
 }
 
 #proj h1{
-  font-size: 50px;
+  font-size: 30px;
   line-height: 1;
   padding: 25px 0;
   text-align: center;
@@ -242,7 +242,7 @@ header p{
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #ff8080;
   color: white;
   transform: rotateY(180deg);
 }
@@ -311,4 +311,63 @@ div.desc {
   content: "";
   display: table;
   clear: both;
+}
+
+#contact{
+  background-attachment: fixed;  /*Parallax effect*/ 
+  background-image: url("../images/contact.jpg");  
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat;  /*Parallax effect */
+  background-size: cover;        /*Parallax effect */
+  color: white;
+  height: 150px;                /* Parallax effect */
+
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
+#contact h1{
+  font-size: 20px;
+  line-height: 1;
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+}
+
+form {
+  padding: 10px;
+}
+
+#facts {
+  padding-left: 20px;
+}
+
+
+div.at-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.at-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #ebb7da;
+  animation-name: angry-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes angry-animation {
+  0%{
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+  100%{
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
 }
