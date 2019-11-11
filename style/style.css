@@ -520,11 +520,11 @@ div.at-container {
 
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) {
   
   #intro{
   background-attachment: fixed; /* Parallax effect */
-  background-image: url("../images/rea_professional_pic.jpg");
+  background-image: url("../images/alt_prof.jpg");
   background-position: middle;   /*Parallax effect */ 
   background-repeat: no-repeat;  /*Parallax effect*/ 
   background-size: cover;        /*Parallax effect*/ 
