@@ -2,7 +2,6 @@ html{
     scroll-behavior: smooth;
 }
 
-
 body{
   background-color: #ddd;
   font-size: 18px;
@@ -412,7 +411,7 @@ div.at-container {
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  background-color: #ebb7da;
+  background-color: #8c2029;
   animation-name: angry-animation;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -549,8 +548,32 @@ div.at-container {
   }
 
   .responsive {
-    width: 3fr;
+    width: 50%;
     margin: 6px 0;
   }
-  
+
+  .flip-gallery{
+  padding-left: 450px;
+}
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: default;/* Your code here - set to default setting */
+    transition: default;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
 }
