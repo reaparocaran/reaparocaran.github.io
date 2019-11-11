@@ -174,7 +174,7 @@ footer{
   background-position: center;   /*Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
-  color: white;
+  color: #8c2029;
   height: 150px;                /* Parallax effect */
 
   grid-column: 1/-1;
